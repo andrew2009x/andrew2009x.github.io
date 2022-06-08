@@ -31,10 +31,24 @@
 // 	return arr;
 // }
 // console.log(array_fill_random(8,1,10));
-
+let start = document.querySelector('.star');
 
 localStorage.setItem('sign', false);//создание ключа name,vol
 let signin = localStorage.getItem('sign');//дает обьект
 console.log(signin);
 // localStorage.removeItem('num');//удаление ключа
 // localStorage.clear();//удаление всех ключей
+function udacha(){
+    start.innerHTML = 'Start.';
+    setTimeout(() => {
+        start.innerHTML = 'Start..';
+    },450);
+    setTimeout(() => {
+        start.innerHTML = 'Start...';
+    },900);
+    setTimeout(() => {
+        open('udacha/ud.html');
+        start.innerHTML = 'Start';
+    }, 1370);
+    
+}
