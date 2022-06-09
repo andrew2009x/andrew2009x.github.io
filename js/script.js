@@ -38,24 +38,22 @@ let signin = localStorage.getItem('sign');//дает обьект
 console.log(signin);
 // localStorage.removeItem('num');//удаление ключа
 // localStorage.clear();//удаление всех ключей
-function Start(){
+function Start(pack,file){
     start.innerHTML = 'Start.';
     setTimeout(() => {
         start.innerHTML = 'Start..';
-    },450);
+    },500);
     setTimeout(() => {
         start.innerHTML = 'Start...';
-    },900);
+    },1000);
     setTimeout(() => {
-        
+        open(`${pack}/${file}.html`);
         start.innerHTML = 'Start';
-    }, 1370);
+    }, 1500);
 }
 function udacha(){
-    Start();
-    open('udacha/ud.html');
+    Start('udacha','ud');
 }
 function matrix(){
-    Start();
-    open('matrix/mat.html');
+    Start('matrix','mat');
 }
