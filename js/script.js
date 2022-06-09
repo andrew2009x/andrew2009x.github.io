@@ -38,7 +38,7 @@ let signin = localStorage.getItem('sign');//дает обьект
 console.log(signin);
 // localStorage.removeItem('num');//удаление ключа
 // localStorage.clear();//удаление всех ключей
-function udacha(){
+function Start(){
     start.innerHTML = 'Start.';
     setTimeout(() => {
         start.innerHTML = 'Start..';
@@ -47,8 +47,15 @@ function udacha(){
         start.innerHTML = 'Start...';
     },900);
     setTimeout(() => {
-        open('udacha/ud.html');
+        
         start.innerHTML = 'Start';
     }, 1370);
-    
+}
+function udacha(){
+    Start();
+    open('udacha/ud.html');
+}
+function matrix(){
+    Start();
+    open('matrix/mat.html');
 }
